@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# Print battery percentage in the following format: "34%"
+acpi -b | awk '{split($0, a, ", "); print a[2]}'
+
