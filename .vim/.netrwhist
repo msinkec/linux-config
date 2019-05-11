@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/media/miha/HDD/Projects/rpi-ip-car/rc_controller/rc_controller/gui'
-let g:netrw_dirhist_2='/media/miha/HDD/School/FRI/Letnik2/TV2/Projekt/lib/opencv-4.0.1'
-let g:netrw_dirhist_3='/media/miha/HDD/Projects/rpi-ip-car/rc_controller/rc_controller/video'
-let g:netrw_dirhist_4='/media/miha/HDD/Projects/rpi-ip-car/rc_controller/rc_controller/gui'
-let g:netrw_dirhist_5='/home/miha/miniconda3/etc'
-let g:netrw_dirhist_6='/home/miha/Scripts'
-let g:netrw_dirhist_7='/home/miha/.scripts'
