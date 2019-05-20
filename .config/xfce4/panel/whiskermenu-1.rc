@@ -1,5 +1,5 @@
 favorites=exo-web-browser.desktop,exo-mail-reader.desktop,exo-file-manager.desktop,libreoffice-writer.desktop,libreoffice-calc.desktop,pidgin.desktop,org.gnome.Software.desktop,exo-terminal-emulator.desktop,xfhelp4.desktop
-recent=nvidia-settings.desktop,firefox.desktop,xfce-keyboard-settings.desktop
+recent=net.lutris.Lutris.desktop,gnome-sudoku.desktop,nvidia-settings.desktop,exo-web-browser.desktop,firefox.desktop,xfce-keyboard-settings.desktop
 button-title=Applications Menu
 button-icon=xubuntu-logo-menu
 button-single-row=false

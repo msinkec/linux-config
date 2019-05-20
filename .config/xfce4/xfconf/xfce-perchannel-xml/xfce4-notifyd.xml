@@ -9,6 +9,7 @@
     <property name="known_applications" type="array">
       <value type="string" value="Blueman"/>
       <value type="string" value="discord"/>
+      <value type="string" value="IDEA"/>
       <value type="string" value="modem-manager-gui"/>
       <value type="string" value="nm-applet"/>
       <value type="string" value="Skype"/>
@@ -16,6 +17,7 @@
       <value type="string" value="System Config Printer Notification"/>
       <value type="string" value="thunar-volman"/>
       <value type="string" value="Transmission"/>
+      <value type="string" value="vlc"/>
       <value type="string" value="Xfce volume control"/>
       <value type="string" value="xfce4-power-manager"/>
       <value type="string" value="xfdesktop"/>
