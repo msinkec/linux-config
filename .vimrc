@@ -16,3 +16,7 @@ xnoremap p pgvy
 " Syntax highlighting
 syn on
 
+" Tab, Shift+Tab for buffer switching
+nnoremap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
+nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR><Paste>
+

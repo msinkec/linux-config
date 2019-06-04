@@ -138,6 +138,17 @@ alias init-conda="source $HOME/.bash/init-conda"
 # Nvim
 alias vim="nvim"
 
+# Add third party go tools (go PPA) to PATH
+if [ -d "/usr/lib/go-1.11/bin" ] ; then
+    PATH="/usr/lib/go-1.11/bin:$PATH"
+fi
+
+# Add go bins to PATH
+if [ -d "$HOME/go/bin" ] ; then
+    PATH="$HOME/go/bin:$PATH"
+fi
+
+
 # Run tmux.
 # THIS NEEDS TO BE AT THE END OF .bashrc
 # we need to make sure that:  
