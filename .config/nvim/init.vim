@@ -49,3 +49,7 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 " Set Airline theme
 let g:airline_theme='term'
 
+" Make vim-go use gopls for def and info
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
+

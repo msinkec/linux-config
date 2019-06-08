@@ -20,3 +20,8 @@ syn on
 nnoremap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
 nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR><Paste>
 
+" Change omni-completion popup colors
+highlight Pmenu ctermbg=darkgray guibg=darkgray ctermfg=white guifg=white
+highlight PmenuSel ctermbg=darkblue guibg=darkblue ctermfg=white guifg=white
+highlight PmenuSbar ctermbg=blue guibg=blue
+highlight PmenuThumb ctermbg=gray guibg=gray
