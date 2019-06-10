@@ -9,11 +9,9 @@ if ! systemctl is-active --quiet display-manager.service; then
     fi
 fi
 
-# Set X keyboard layout
-setxkbmap si &
-
-# Restore background image, if it's set.
-$HOME/.fehbg &
+setxkbmap si &          # Set X keyboard layout
+$HOME/.fehbg &          # Restore background image, if it's set.
+statbar &               # Script for updating the status bar
 
 # Execute window manager
 exec $WM
