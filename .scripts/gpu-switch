@@ -1,0 +1,11 @@
+#!/bin/sh
+
+[ ! "$USER" = "root" ] && echo "This script must be run as root." && exit 1
+
+optimus-manager --switch auto || exit 1
+
+systemctl is-active --quiet display-manager.service && echo "A DM seems to be running. Log out using your DM instead!" && exit 1
+
+# The script below must survive the X session (which is probably it's parent), so we use nohup
+nohup /bin/sh $(dirname $0)/.gpu-switch > /dev/null
+

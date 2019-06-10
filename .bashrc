@@ -118,6 +118,9 @@ fi
 # set Xterm alias for X11 clipboard support
 alias xterm="xterm -ls -xrm 'XTerm*selectToClipboard: true'"
 
+# Enable sudo autocompletion
+complete -cf sudo
+
 # Add slash when autocompleting sym-linked dir
 bind 'set mark-symlinked-directories on'
 

@@ -2,11 +2,13 @@
 
 !.gitignore
 !.bashrc
+!.bash_profile
 !.bash/
 !.vimrc
 !.gitconfig
 !.tmux.conf
 !.scripts/
+!.xinitrc
 
 !.config/
 .config/*
@@ -25,4 +27,12 @@
 !.vim/
 .vim/*
 !.vim/plugin/
+
+!.local/
+.local/*
+
+!.local/share/
+.local/share/*
+
+!.local/share/optimus-manager/
 
