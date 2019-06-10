@@ -129,11 +129,6 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-# add Scripts folder to PATH
-if [ -d "$HOME/.scripts" ] ; then
-    PATH="$HOME/.scripts:$PATH"
-fi
-
 ## add aliases to various scripts that need this shells context
 # conda enviroment
 alias init-conda="source $HOME/.bash/init-conda"
