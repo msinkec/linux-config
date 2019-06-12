@@ -1,0 +1,10 @@
+#!/bin/sh
+
+if [ $1 = "toggle" ]; then 
+    pactl set-sink-mute @DEFAULT_SINK@ toggle
+else
+    pactl set-sink-volume @DEFAULT_SINK@ $1%
+fi
+
+refstatbar      # Refresh status bar to display new volume level
+

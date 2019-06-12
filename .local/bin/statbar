@@ -1,12 +1,46 @@
 #!/bin/sh
 
+# Handle SIGCONT signals sent by refresh script to update the status bar.
+trap 'update' 18
+
 status() { \
-    echo " | "
-    date +"%H:M %A %d.%m.%y"
+    printf "   "
+
+    ip route get 1.2.3.4 | awk 'NR==1{ if ($5=="") {print "offline"} else {print $5 " " $7} }'
+ 
+    printf "| "
+    if [ "$(pulsemixer --get-mute)" = "1" ]; then 
+        printf "🔇"
+    else
+        vol=$(pulsemixer --get-volume | awk '{print $1}')
+        if [ "$vol" -gt "70" ]; then
+            icon="🔊"
+        elif [ "$vol" -lt "30" ]; then
+            icon="🔈"
+        else
+            icon="🔉"
+        fi
+        printf "%s %s%%\\n" "$icon" "$vol"
+    fi
+
+    printf " | "
+    printf "⚡"; printf "%s" "$(battery)"
+
+    printf " | "
+    setxkbmap -query | grep layout | awk  '{print $2}'
+
+    printf " | "
+    date +"%H:%M %A %d.%m.%Y"
+}
+
+update() { \
+    xsetroot -name "$(status | tr '\n' ' ')" &
+    wait
 }
 
 while :; do
-	xsetroot -name "$(status | tr '\n' ' ')"
-    sleep 30s
+    update
+    sleep 5s &
+    wait
 done
 

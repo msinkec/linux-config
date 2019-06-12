@@ -9,6 +9,7 @@
 !.tmux.conf
 !.scripts/
 !.xinitrc
+!.xbindkeysrc
 
 !.config/
 .config/*
@@ -37,4 +38,6 @@
 !.local/bin/
 
 !.local/share/optimus-manager/
+
+!.screenlayout/
 

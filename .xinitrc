@@ -9,10 +9,13 @@ if ! systemctl is-active --quiet display-manager.service; then
     fi
 fi
 
+xset b off              # Disable beeping speaker
 setxkbmap si &          # Set X keyboard layout
-$HOME/.fehbg &          # Restore background image, if it's set.
+$HOME/.fehbg &          # Restore background image, if it's set
 statbar &               # Script for updating the status bar
+xbindkeys --poll-rc     # Load X key binding
+.screenlayout/default.layout.sh &         # Set my default X layout with xrandr
 
-# Execute window manager
+# Start window manager
 exec $WM
 

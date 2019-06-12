@@ -1,5 +1,5 @@
 #!/bin/sh
 
-# "refresh" status bar. This is done by killing the sleep instance running under the statbar script.
+# Send SIGCONT signal to status bar script, which will handle it with a trap.
+pkill -SIGCONT statbar
 
-kill "$(pstree -lp | grep -- -statbar\([0-9] | sed "s/.*sleep(\([0-9]\+\)).*/\1/")"

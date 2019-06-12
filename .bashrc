@@ -124,7 +124,7 @@ complete -cf sudo
 # Add slash when autocompleting sym-linked dir
 bind 'set mark-symlinked-directories on'
 
-# set PATH so it includes user's private bin if it exists
+# Add ./locan/bin to PATH
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi

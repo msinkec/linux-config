@@ -1,0 +1,20 @@
+# Increase backlight
+"xbacklight -inc 10"
+    XF86MonBrightnessUp
+    
+# Decrease backlight
+"xbacklight -dec 10"
+    XF86MonBrightnessDown
+
+# Increase volume
+"volume +5"
+    XF86AudioRaiseVolume
+
+# Decrease volume
+"volume -5"
+    XF86AudioLowerVolume
+
+# Mute volume
+"volume toggle"
+    XF86AudioMute
+
