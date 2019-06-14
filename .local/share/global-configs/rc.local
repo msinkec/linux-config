@@ -1,0 +1,10 @@
+#!/bin/sh -e
+
+# Disable ACPI wakeup triggers.
+echo "PEG0" > /proc/acpi/wakeup
+echo "XHC" > /proc/acpi/wakeup
+echo "RP09" > /proc/acpi/wakeup
+echo "RP13" > /proc/acpi/wakeup
+echo "RP14" > /proc/acpi/wakeup
+
+exit 0

@@ -18,3 +18,6 @@
 "volume toggle"
     XF86AudioMute
 
+# Take screenshot
+"import $HOME/$(date +%s).jpg"
+    Print

@@ -1,12 +1,16 @@
 #!/bin/sh
 
-# Handle SIGCONT signals sent by refresh script to update the status bar.
-trap 'update' 18
+# Handle SIGTRAP signals sent by refresh script to update the status bar.
+trap 'update' 5
 
 status() { \
     printf "   "
 
-    ip route get 1.2.3.4 | awk 'NR==1{ if ($5=="") {print "offline"} else {print $5 " " $7} }'
+    if  ip route get 1.2.3.4 > /dev/null; then 
+        ip route  | awk 'NR==1{ print $5 " " $9 }'
+    else
+        printf "offline"
+    fi    
  
     printf "| "
     if [ "$(pulsemixer --get-mute)" = "1" ]; then 
