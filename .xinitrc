@@ -13,7 +13,7 @@ xset b off              # Disable beeping speaker
 setxkbmap si &          # Set X keyboard layout
 $HOME/.fehbg &          # Restore background image, if it's set
 statbar &               # Script for updating the status bar
-xbindkeys --poll-rc     # Load X key binding
+xbindkeys --poll-rc &   # Load X key binding
 .screenlayout/default.layout.sh &         # Set my default X layout with xrandr
 
 # Start window manager

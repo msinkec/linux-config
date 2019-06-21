@@ -9,7 +9,7 @@ status() { \
     if  ip route get 1.2.3.4 > /dev/null; then 
         ip route  | awk 'NR==1{ print $5 " " $9 }'
     else
-        printf "offline"
+        printf "offline "
     fi    
  
     printf "| "

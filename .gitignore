@@ -14,9 +14,7 @@
 !.config/
 .config/*
 
-!.config/xfce4/
-.config/xfce4/desktop/*
-.config/xfce4/xfce4-screenshooter
+!.config/zathura/
 
 !.config/nvim/
 

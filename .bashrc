@@ -146,6 +146,8 @@ if [ -d "$HOME/go/bin" ] ; then
     PATH="$HOME/go/bin:$PATH"
 fi
 
+# Fix for JetBrains IDE-s rendering issues with non-reparenting wm-s
+export _JAVA_AWT_WM_NONREPARENTING=1
 
 # Run tmux.
 # THIS NEEDS TO BE AT THE END OF .bashrc
