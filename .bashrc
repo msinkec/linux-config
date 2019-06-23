@@ -133,9 +133,6 @@ fi
 # conda enviroment
 alias init-conda="source $HOME/.bash/init-conda"
 
-# Nvim
-alias vim="nvim"
-
 # Add third party go tools (go PPA) to PATH
 if [ -d "/usr/lib/go-1.11/bin" ] ; then
     PATH="/usr/lib/go-1.11/bin:$PATH"
@@ -145,6 +142,13 @@ fi
 if [ -d "$HOME/go/bin" ] ; then
     PATH="$HOME/go/bin:$PATH"
 fi
+
+# Use nvim
+alias vim="nvim"
+
+# Set default text editor
+export EDITOR="nvim"
+export VISUAL="nvim"
 
 # Fix for JetBrains IDE-s rendering issues with non-reparenting wm-s
 export _JAVA_AWT_WM_NONREPARENTING=1

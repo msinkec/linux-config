@@ -14,6 +14,8 @@
 !.config/
 .config/*
 
+!.config/mimeapps.list
+
 !.config/zathura/
 
 !.config/nvim/
@@ -30,12 +32,19 @@
 !.local/
 .local/*
 
+!.local/bin/
+
 !.local/share/
 .local/share/*
 
-!.local/bin/
-
 !.local/share/global-configs/
+
+!.local/share/applications/
+.local/share/applications/*
+
+!.local/share/applications/img.desktop
+!.local/share/applications/pdf.desktop
+!.local/share/applications/text.desktop
 
 !.screenlayout/
 

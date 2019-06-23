@@ -33,7 +33,7 @@ status() { \
     printf " | "
     setxkbmap -query | grep layout | awk  '{print $2}'
 
-    printf " | "
+    printf "| "
     date +"%H:%M %A %d.%m.%Y"
 }
 
