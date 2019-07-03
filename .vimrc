@@ -16,9 +16,12 @@ xnoremap p pgvy
 " Syntax highlighting
 syn on
 
+" Enable hidden buffers, to avoid writing on bufer swap
+set hidden
+
 " Tab, Shift+Tab for buffer switching
-nnoremap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
-nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR><Paste>
+nnoremap  <silent>   <tab>  :bn<CR>
+nnoremap  <silent> <s-tab>  :bp<CR>
 
 " Change omni-completion popup colors
 highlight Pmenu ctermbg=darkgray guibg=darkgray ctermfg=white guifg=white
