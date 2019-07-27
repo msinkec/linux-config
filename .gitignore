@@ -32,7 +32,7 @@
 !.local/
 .local/*
 
-!.local/bin/
+!.local/scripts/
 
 !.local/share/
 .local/share/*

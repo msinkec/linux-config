@@ -10,7 +10,7 @@ set fillchars+=vert:\│
 hi VertSplit ctermfg=Black ctermbg=DarkGray
 
 
-"""""""""""""""""""" PLUGINS """"""""""""""""""""""""""""""""""
+"""""""""""""""""""" PLUGINS (vim-plug)""""""""""""""""""""""""
 
 " Specify a directory for plugins
 " - For Neovim: ~/.local/share/nvim/plugged
@@ -27,6 +27,10 @@ Plug 'tpope/vim-fugitive'
 
 " Nerdtree file explorer
 Plug 'scrooloose/nerdtree'
+
+" Python autocompletion (requires pynvim for +python3 support)
+" On Arch you can isnstall this plugin from the 'vim-jedi' package. 
+Plug 'davidhalter/jedi-vim'
 
 " Golang plugin
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
@@ -53,3 +57,6 @@ let g:airline_theme='term'
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
 
+" Jedi automatically starts the completion if you type a dot, e.g. str.
+" Disable it using this:
+let g:jedi#popup_on_dot = 0

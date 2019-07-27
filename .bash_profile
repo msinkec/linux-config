@@ -3,9 +3,9 @@
 # Define WM to use
 export WM="dwm"
 
-# Add ./locan/bin to PATH
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
+# Add ~/.local/scripts/ to PATH
+if [ -d "$HOME/.local/scripts" ] ; then
+    PATH="$HOME/.local/scripts:$PATH"
 fi
 
 # If WM is not already running, start X-server
