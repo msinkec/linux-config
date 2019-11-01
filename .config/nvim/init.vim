@@ -28,18 +28,29 @@ Plug 'tpope/vim-fugitive'
 " Nerdtree file explorer
 Plug 'scrooloose/nerdtree'
 
-" Python autocompletion (requires pynvim for +python3 support)
-" On Arch you can isnstall this plugin from the 'vim-jedi' package. 
-Plug 'davidhalter/jedi-vim'
+" Asynchronous completion framework for Nvim
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
-" Golang plugin
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+" Python autocompletion
+" Needs 'pip install pynvim jedi'
+"Plug 'davidhalter/jedi-vim'
+Plug 'deoplete-plugins/deoplete-jedi'
+
+" Go deoplete autocompletion
+" Requires 'gocode' completion engine
+Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
+
+" Some dark colorscheme
+Plug 'msinkec/simpleblack'
 
 " Initialize plugin system
 call plug#end()
 
 
 """""""""""""""""" PLUGIN CONFIGURATION """"""""""""""""""""""
+
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
 
 " Enable Airline buffer numbering
 let g:airline#extensions#tabline#buffer_nr_show = 1
@@ -53,10 +64,9 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 " Set Airline theme
 let g:airline_theme='term'
 
-" Make vim-go use gopls for def and info
-let g:go_def_mode='gopls'
-let g:go_info_mode='gopls'
-
 " Jedi automatically starts the completion if you type a dot, e.g. str.
 " Disable it using this:
 let g:jedi#popup_on_dot = 0
+
+" Enable colorscheme
+colorscheme simpleblack

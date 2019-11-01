@@ -2,12 +2,14 @@
 
 # Print battery percentage in the following format: "34%"
 # If not charging, also print remaining battery time.
-acpi -b | tail -n1 | awk '{split($0, a, ", "); 
-                printf "%s", a[2]; 
+acpi -i | grep -B 1 design | head -n1 | awk '{
+                split($0, a, ", ");
+                printf "%s", a[2];
                 split(a[1], b, ": "); 
                 if(b[2] == "Discharging") {
-                    hrs = substr(a[3],1,5);
-                    printf " %s", hrs;
+                    time = substr(a[3],1,5);
+                    printf " %s", time;
                 }
-                print ""}'
+                print ""
+            }'
 

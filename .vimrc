@@ -1,3 +1,6 @@
+" Source file with custom functions
+source $HOME/.vimfunc
+
 " filetype plugin indent on
 
 " Display line numbers

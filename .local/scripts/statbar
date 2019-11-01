@@ -4,8 +4,6 @@
 trap 'update' 5
 
 status() { \
-    printf "   "
-
     if  ip route get 1.2.3.4 > /dev/null; then 
         ip route | grep "default" | grep "src" | awk 'NR==1{ print $5 " " $9 }'
     else
@@ -44,7 +42,7 @@ update() { \
 
 while :; do
     update
-    sleep 5s &
+    sleep 10 &
     wait
 done
 
