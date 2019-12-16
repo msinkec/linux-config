@@ -26,6 +26,10 @@ set hidden
 nnoremap  <silent>   <tab>  :bn<CR>
 nnoremap  <silent> <s-tab>  :bp<CR>
 
+" Set the filetype based on the file's extension, overriding any
+" 'filetype' that has already been set
+au BufRead,BufNewFile *.cl set filetype=c
+
 " Change omni-completion popup colors
 highlight Pmenu ctermbg=darkgray guibg=darkgray ctermfg=white guifg=white
 highlight PmenuSel ctermbg=darkblue guibg=darkblue ctermfg=white guifg=white

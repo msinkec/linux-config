@@ -41,7 +41,11 @@ Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
 
 " Some dark colorscheme
-Plug 'msinkec/simpleblack'
+Plug 'msinkec/Apprentice'
+
+" Code formater
+Plug 'google/vim-maktaba'
+Plug 'google/vim-codefmt'
 
 " Initialize plugin system
 call plug#end()
@@ -69,4 +73,4 @@ let g:airline_theme='term'
 let g:jedi#popup_on_dot = 0
 
 " Enable colorscheme
-colorscheme simpleblack
+colorscheme apprentice
