@@ -37,7 +37,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'deoplete-plugins/deoplete-jedi'
 
 " Go deoplete autocompletion
-" Requires 'gocode' completion engine
+" Requires 'gocode' completion engine to be in PATH
 Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
 
 " Some dark colorscheme
