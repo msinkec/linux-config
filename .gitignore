@@ -5,6 +5,7 @@
 !.bash_profile
 !.bash/
 !.vimrc
+!.vimfunc
 !.gitconfig
 !.tmux.conf
 !.scripts/
