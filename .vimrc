@@ -19,7 +19,7 @@ xnoremap p pgvy
 " Syntax highlighting
 syn on
 
-" Enable hidden buffers, to avoid writing on bufer swap
+" Enable hidden buffers, to avoid writing on buffer swap
 set hidden
 
 " Tab, Shift+Tab for buffer switching
@@ -35,3 +35,9 @@ highlight Pmenu ctermbg=darkgray guibg=darkgray ctermfg=white guifg=white
 highlight PmenuSel ctermbg=darkblue guibg=darkblue ctermfg=white guifg=white
 highlight PmenuSbar ctermbg=blue guibg=blue
 highlight PmenuThumb ctermbg=gray guibg=gray
+
+" Highlight comments as italic
+highlight Comment cterm=italic
+
+" Highlight the line, where the cursor is
+se cursorline

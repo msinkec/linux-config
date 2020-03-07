@@ -38,10 +38,13 @@ Plug 'deoplete-plugins/deoplete-jedi'
 
 " Go deoplete autocompletion
 " Requires 'gocode' completion engine to be in PATH
+" go get -u github.com/nsf/gocode
 Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
 
 " Some dark colorscheme
-Plug 'msinkec/Apprentice'
+"Plug 'msinkec/Apprentice'
+Plug 'nanotech/jellybeans.vim'
+let g:jellybeans_use_term_italics = 1
 
 " Code formater
 Plug 'google/vim-maktaba'
@@ -73,4 +76,4 @@ let g:airline_theme='term'
 let g:jedi#popup_on_dot = 0
 
 " Enable colorscheme
-colorscheme apprentice
+colorscheme jellybeans

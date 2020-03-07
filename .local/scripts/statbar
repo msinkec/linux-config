@@ -5,24 +5,17 @@ trap 'update' 5
 
 status() { \
     if  ip route get 1.2.3.4 > /dev/null; then 
-        ip route | grep "default" | grep "src" | awk 'NR==1{ print $5 " " $9 }'
+        ip route get 1.2.3.4 | grep "src" | awk 'NR==1{ print $5 " " $7 }'
     else
         printf "offline "
     fi    
  
     printf "| "
     if [ "$(pulsemixer --get-mute)" = "1" ]; then 
-        printf "🔇"
+        printf "mut"
     else
         vol=$(pulsemixer --get-volume | awk '{print $1}')
-        if [ "$vol" -gt "70" ]; then
-            icon="🔊"
-        elif [ "$vol" -lt "30" ]; then
-            icon="🔈"
-        else
-            icon="🔉"
-        fi
-        printf "%s %s%%\\n" "$icon" "$vol"
+        printf "vol: %s %s%%\\n" "$icon" "$vol"
     fi
 
     printf " | "
