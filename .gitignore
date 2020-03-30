@@ -2,15 +2,16 @@
 
 !.gitignore
 !.bashrc
-!.bash_profile
+!.zshrc
+!.profile
 !.bash/
 !.vimrc
 !.vimfunc
 !.gitconfig
 !.tmux.conf
-!.scripts/
 !.xinitrc
 !.xbindkeysrc
+!.inputrc
 
 !.config/
 .config/*

@@ -15,6 +15,7 @@ $HOME/.fehbg &          # Restore background image, if it's set
 statbar &               # Script for updating the status bar
 xbindkeys --poll-rc &   # Load X key binding
 .screenlayout/default.layout.sh &         # Set my default X layout with xrandr
+export SHELL="/usr/bin/zsh"               # Set default shell inside X session
 
 # Start window manager
 exec $WM
