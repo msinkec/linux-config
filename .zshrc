@@ -8,22 +8,24 @@ esac
 autoload -Uz compinit
 compinit
 zstyle ':completion:*' menu select
+zstyle ':completion:*' special-dirs true
 setopt COMPLETE_ALIASES
 zstyle ':completion::complete:*' gain-privileges 1
 
-# don't put duplicate lines or lines starting with space in the history.
-# See bash(1) for more options
-HISTCONTROL=ignoreboth
-HISTSIZE=100000
-HISTFILESIZE=100000
-HISTFILE=~/.cache/zfs/history
+# keep slash on autocompletion
+setopt no_auto_remove_slash
 
-# Use vim keys in tab complete menu:
-bindkey -M menuselect 'h' vi-backward-char
-bindkey -M menuselect 'k' vi-up-line-or-history
-bindkey -M menuselect 'l' vi-forward-char
-bindkey -M menuselect 'j' vi-down-line-or-history
-bindkey -v '^?' backward-delete-char
+if [ -d "/usr/share/oh-my-zsh/" ] ; then
+    plugins=( 
+            docker docker-compose
+        )
+fi
+
+# command history options
+setopt appendhistory
+HISTSIZE=30000
+SAVEHIST=30000
+HISTFILE=~/.zsh_history
 
 # set a fancy prompt
 case "$TERM" in

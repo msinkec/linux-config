@@ -1,8 +1,10 @@
 #!/bin/sh
 
-pkill startx
-pkill Xorg
-killall /usr/bin/X
+#pkill startx
+#pkill Xorg
+#killall /usr/bin/X
+
+pkill X
 
 # TODO: Currently switching back from nvidia to intel doesn't work so I just restart the computer.
 #       prime-switch can't turm off nvidia modules because they remain used by something.

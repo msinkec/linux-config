@@ -7,5 +7,8 @@ optimus-manager --switch nvidia || exit 1
 systemctl is-active --quiet display-manager.service && echo "A DM seems to be running. Log out using your DM instead!" && exit 1
 
 # The script below must survive the X session (which is probably it's parent), so we use nohup
-nohup /bin/sh $(dirname $0)/.gpu-switch > /dev/null
+#nohup /bin/sh $(dirname $0)/.gpu-switch > /dev/null
 
+# The above method has a bug, where the nvidia Xorg config file doesn't get created
+. /usr/bin/prime-switch
+pkill X
