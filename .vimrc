@@ -22,9 +22,11 @@ syn on
 " Enable hidden buffers, to avoid writing on buffer swap
 set hidden
 
-" Tab, Shift+Tab for buffer switching
-nnoremap  <silent>   <tab>  :bn<CR>
-nnoremap  <silent> <s-tab>  :bp<CR>
+" Quick buffer switching
+"nnoremap  <silent>   <tab>  :bn<CR>
+"nnoremap  <silent> <s-tab>  :bp<CR>
+map gn :bn<cr>
+map gp :bp<cr>
 
 " Set the filetype based on the file's extension, overriding any
 " 'filetype' that has already been set

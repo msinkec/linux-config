@@ -25,9 +25,6 @@ Plug 'vim-airline/vim-airline-themes'
 " Fugitive Git wrapper
 Plug 'tpope/vim-fugitive'
 
-" Nerdtree file explorer
-Plug 'scrooloose/nerdtree'
-
 " Asynchronous completion framework for Nvim
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
@@ -49,6 +46,9 @@ let g:jellybeans_use_term_italics = 1
 " Code formater
 Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
+
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " Initialize plugin system
 call plug#end()
@@ -77,3 +77,6 @@ let g:jedi#popup_on_dot = 0
 
 " Enable colorscheme
 colorscheme jellybeans
+
+" Set hotkey for GFiles command of fzf
+nnoremap <C-p> :GFiles<CR>

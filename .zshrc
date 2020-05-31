@@ -61,6 +61,11 @@ if [ -d "$HOME/.local/scripts" ] ; then
     PATH="$HOME/.local/scripts:$PATH"
 fi
 
+# Add ~/.screenlayout to PATH
+if [ -d "$HOME/.screenlayout/" ] ; then
+    PATH="$HOME/.screenlayout:$PATH"
+fi
+
 ## add aliases to various scripts that need this shells context
 # conda enviroment
 alias init-conda="source $HOME/.bash/init-conda"
