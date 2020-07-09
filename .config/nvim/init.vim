@@ -37,7 +37,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Python autocompletion
 " Needs 'pip install pynvim jedi'
-"Plug 'davidhalter/jedi-vim'
+Plug 'davidhalter/jedi-vim'
 Plug 'deoplete-plugins/deoplete-jedi'
 
 " Go deoplete autocompletion
