@@ -28,6 +28,12 @@ set hidden
 map gn :bn<cr>
 map gp :bp<cr>
 
+" Change leader key
+let mapleader = ","
+
+" Close buffer hotkey
+map <Leader><ESC> :Bclose<cr>
+
 " Set the filetype based on the file's extension, overriding any
 " 'filetype' that has already been set
 au BufRead,BufNewFile *.cl set filetype=c
