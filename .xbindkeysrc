@@ -19,5 +19,5 @@
     XF86AudioMute
 
 # Take screenshot
-"import $HOME/$(date +%s).jpg"
+"mkdir -p $HOME/Pictures/Screenshots; import $HOME/Pictures/Screenshots/$(date +%s).jpg"
     Print

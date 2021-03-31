@@ -10,5 +10,4 @@ pkill X
 #       prime-switch can't turm off nvidia modules because they remain used by something.
 #rmmod --force nvidia-drm
 
-. /usr/bin/prime-switch
-
+prime-switch

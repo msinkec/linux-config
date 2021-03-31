@@ -36,7 +36,7 @@ Plug 'deoplete-plugins/deoplete-jedi'
 " Go deoplete autocompletion
 " Requires 'gocode' completion engine to be in PATH
 " go get -u github.com/nsf/gocode
-Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
+"Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
 
 " Some dark colorscheme
 "Plug 'msinkec/Apprentice'
@@ -49,6 +49,10 @@ Plug 'google/vim-codefmt'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+
+" YAML formating.
+" Requires 'pip install pyyaaml' 
+Plug 'msinkec/vim-yaml-formatter'
 
 " Initialize plugin system
 call plug#end()

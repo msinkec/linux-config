@@ -1,0 +1,4 @@
+[Desktop Entry]
+Type=Application
+Name=File browser
+Exec=thunar %F

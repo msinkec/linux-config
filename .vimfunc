@@ -31,3 +31,6 @@ function! DoPrettyJSON()
   %!jq .
 endfunction
 command! PrettyJSON call DoPrettyJSON()
+
+" Requires github.com/msinkec/vim-yaml-formatter
+command! PrettyYAML call YAMLFormat()

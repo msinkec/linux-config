@@ -1,4 +1,5 @@
 [Default Applications]
+inode/directory=filebrowser.desktop
 text/plain=text.desktop;
 text/x-shellscript=text.desktop;
 application/pdf=pdf.desktop;
@@ -8,3 +9,9 @@ image/gif=img.desktop;
 x-scheme-handler/http=brave.desktop;
 x-scheme-handler/https=brave.desktop;
 x-scheme-handler/postman=Postman.desktop
+x-scheme-handler/msteams=teams.desktop
+
+[Added Associations]
+video/mp4=vlc.desktop;mpv.desktop;
+video/x-matroska=vlc.desktop;
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;

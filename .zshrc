@@ -80,6 +80,9 @@ if [ -d "$HOME/go/bin" ] ; then
     PATH="$HOME/go/bin:$PATH"
 fi
 
+GOPATH=~/go
+GOROOT=/usr/lib/go
+
 # Use nvim
 alias vim="nvim"
 
