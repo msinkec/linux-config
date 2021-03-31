@@ -9,8 +9,15 @@ set clipboard+=unnamedplus
 set fillchars+=vert:\│
 hi VertSplit ctermfg=Black ctermbg=DarkGray
 
+" Set Python path
+let g:python3_host_prog = '/usr/bin/python3'
 
 """""""""""""""""""" PLUGINS (vim-plug)""""""""""""""""""""""""
+" Install vim-plug if it's not found
+if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
+    silent !sh -c 'curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+    autocmd VimEnter * PlugInstall --sync
+endif
 
 " Specify a directory for plugins
 " - For Neovim: ~/.local/share/nvim/plugged
@@ -62,6 +69,9 @@ call plug#end()
 
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
+" Enable deoplete when InsertEnter.
+let g:deoplete#enable_at_startup = 0
+autocmd InsertEnter * call deoplete#enable()
 
 " Enable Airline buffer numbering
 let g:airline#extensions#tabline#buffer_nr_show = 1

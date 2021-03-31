@@ -12,6 +12,7 @@
 !.xinitrc
 !.xbindkeysrc
 !.inputrc
+!.depends
 
 !.config/
 .config/*
