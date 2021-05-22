@@ -20,8 +20,8 @@
 !.config/mimeapps.list
 
 !.config/zathura/
-
 !.config/nvim/
+!.config/alacritty/
 
 !.weechat/
 .weechat/*
